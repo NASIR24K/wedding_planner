@@ -1,0 +1,139 @@
+/* Style the hero section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Style the carousel images */
+.owl-carousel .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Style the carousel content */
+.owl-carousel .item .content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #000;
+}
+
+/* Style the carousel content headings and descriptions */
+.owl-carousel .item .content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.owl-carousel .item .content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.owl-carousel .item .content p {
+    font-size: 18px;
+}
+
+/* Style the navigation icons */
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #007bff;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.owl-prev {
+    left: 20px;
+}
+
+.owl-next {
+    right: 20px;
+}
+
+/* Style the active navigation icon */
+.owl-prev.owl-disabled,
+.owl-next.owl-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Media queries for responsive design */
+
+/* Small devices */
+@media screen and (max-width: 767px) {
+    .owl-carousel .item .content h1 {
+        font-size: 24px;
+    }
+
+    .owl-carousel .item .content h2 {
+        font-size: 20px;
+    }
+
+    .owl-carousel .item .content p {
+        font-size: 16px;
+    }
+
+    .owl-prev,
+    .owl-next {
+        font-size: 24px;
+    }
+}
+/* Style the hero section and carousel items as previously shown */
+
+/* Add the fade-in animation */
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeInAnimation 1s ease-in 0s 1 normal forwards;
+}
+
+/* Add the fade-out animation */
+@keyframes fadeOutAnimation {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOutAnimation 1s ease-out 3s 1 normal forwards;
+}
+
+
+/* Medium devices */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .owl-carousel .item .content h1 {
+        font-size: 28px;
+    }
+
+    .owl-carousel .item .content h2 {
+        font-size: 22px;
+    }
+
+    .owl-carousel .item .content p {
+        font-size: 18px;
+    }
+
+    .owl-prev,
+    .owl-next {
+        font-size: 28px;
+    }
+}
+
+/* Large devices */
+@media screen and (min-width: 992px) {
+    /* Add your custom styles for large devices here */
+}

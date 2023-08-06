@@ -1,0 +1,78 @@
+/* Reset default list styles for the navigation */
+#mainNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the navigation links */
+#mainNav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+#mainNav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#mainNav a:hover {
+    background-color: #f7f7f7;
+}
+
+/* Style the visitor icon */
+#visitorIcon {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#visitorIcon:hover {
+    background-color: #0056b3;
+    cursor: pointer;
+}
+
+/* Media queries for responsive design */
+
+/* Small devices */
+@media screen and (max-width: 767px) {
+    #mainNav {
+        background-color: #f7f7f7; /* Navigation background color for small devices */
+        height: 60px; /* Navigation height for small devices */
+    }
+
+    #mainNav ul {
+        text-align: center; /* Center-align the navigation items on small devices */
+    }
+
+    #mainNav li {
+        display: block; /* Display navigation items as block elements on small devices */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium to large devices */
+@media screen and (min-width: 768px) {
+    #mainNav {
+        background-color: transparent; /* Reset navigation background color for medium and large devices */
+        height: 80px; /* Reset navigation height for medium and large devices */
+    }
+
+    #mainNav ul {
+        text-align: right; /* Right-align the navigation items on medium and large devices */
+    }
+
+    #mainNav li {
+        display: inline-block; /* Display navigation items as inline-block elements on medium and large devices */
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
