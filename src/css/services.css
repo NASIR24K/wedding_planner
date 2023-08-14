@@ -2,25 +2,16 @@
   
   /* Style the services section */
   #services {
-    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
   }
   
   /* Style the heading and subheadings */
   h2, h3 {
     color: #333;
     margin-bottom: 10px;
-  }
-  
-  /* Style the unordered list */
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
-  /* Style the list items */
-  li {
-    margin-bottom: 5px;
   }
   
   /* Style the call-to-action button */
@@ -55,10 +46,9 @@
   }
   
   .column {
-    max-width: 36.33%;
     position: relative;
     align-items: stretch;
-     padding: 5px;
+     padding: 3px;
      text-align: center;
   }
   
@@ -71,7 +61,6 @@
   .total {
     width: 100%;
     height: 100%;
-    align-items: stretch;
     opacity: 0;
     transition: opacity 0.3s;
     position: absolute;
@@ -83,9 +72,127 @@
   
   .column:hover img {
     opacity: 0.5;
+    border: 1px solid #ddd;
   }
   
   .column:hover .total {
     opacity: 1;
   }
   
+/* Media Queries for Small Devices (e.g., Mobile Phones) */
+@media only screen and (max-width: 600px) {
+    .column {
+      flex-basis: 100%;
+    }
+  }
+  
+  /* Media Queries for Medium Devices (e.g., Tablets) */
+  @media only screen and (min-width: 601px) and (max-width: 992px) {
+    .column {
+      flex-basis: 50%;
+    }
+  }
+  
+  /* Media Queries for Large Devices (e.g., Desktops and Laptops) */
+  @media only screen and (min-width: 993px) {
+    .column {
+      flex-basis: 25%;
+    }
+  }
+
+  
+  
+  
+  /* end */
+   /* Container for the pricing table */
+   .pricing-tableC {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #ddd;
+  }
+  
+  /* Individual plan */
+  .planC {
+    background-color: #f7f2f5;
+    transition: transform 0.3s ease;
+    border-radius:2px;
+    margin: 20px;
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+  .planC:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  /* Recommended plan */
+  .recommendedC {
+    border: 2px solid #ff00c8;
+  }
+  
+  /* Plan name */
+  .planC h3.resizable-border {
+    position: relative;
+    text-align: center;
+    }
+    .planC h3.resizable-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    width: 35%;
+    height: 3px; /* Adjust the height of the border here */
+    background-color: #ff00c8; /* Adjust the color of the border here */
+    cursor: row-resize;
+    text-align: left;
+    pointer-events: none;
+    }
+    .planC h3.resizable-border:hover::after {
+    background-color: #810165;
+    pointer-events: auto;
+    }
+  
+  /* Plan price */
+  .planC .priceC {
+    color: #ff00c8;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Plan feature list */
+  .planC ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .planC li {
+    color: #000;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  /* Sign up button */
+  .planC .signupC {
+    background-color: #ff00c8;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .planC .signupC:hover {
+    background-color: #810165;
+  }
+   /*end table*/
